@@ -22,22 +22,17 @@ class InvoiceTest {
 
     @Test
     void format() {
-        assertEquals("                     I N V O I C E\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "Description                      Price  Qty   Total\n" +
-                "\n" +
-                "AMOUNT DUE: $    0,00",invoice.format());
+
         Product product = new Product("a",2);
         invoice.add(product,5);
-        assertEquals("                     I N V O I C E\n" +
-                "\n" +
-                "\n" +
-                "\n" +
+        assertEquals("                     I N V O I C E\n\n" +
+                "1\n" +
+                "2\n" +
+                "3, 4 5\n\n" +
                 "Description                      Price  Qty   Total\n" +
+                "a                                 2,00    5   10,00" +
                 "\n\n" +
-                "AMOUNT DUE: $    0,00",invoice.format());
+                "AMOUNT DUE: $   10,00",invoice.format());
     }
 
     @Test
