@@ -24,7 +24,7 @@ public class LineItem
       @return the total price
    */
    public double getTotalPrice()
-   {  
+   {
 
       return 0;
    }

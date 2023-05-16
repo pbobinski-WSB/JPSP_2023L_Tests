@@ -8,6 +8,11 @@ import java.util.ArrayList;
 public class Invoice
 {  
    private Address billingAddress;
+
+   public ArrayList<LineItem> getItems() {
+      return items;
+   }
+
    private ArrayList<LineItem> items;
 
    /**
@@ -26,28 +31,29 @@ public class Invoice
       @param quantity the quantity of the product
    */
    public void add(Product product, int quantity)
-   {  
+   {
 
    }
 
    /**
-      Formats the invoice.
-      @return the formatted invoice
-   */
+    Formats the invoice.
+    @return the formatted invoice
+    */
    public String format()
-   {  
+   {
       String r =  "                     I N V O I C E\n\n";
 
       return r;
    }
 
    /**
-      Computes the total amount due.
-      @return the amount due
-   */
+    Computes the total amount due.
+    @return the amount due
+    */
    public double getAmountDue()
-   {  
+   {
       double amountDue = 0;
+
       return amountDue;
    }
 }
