@@ -40,6 +40,11 @@ class InvoiceTest {
         assertEquals(0,invoice.getAmountDue());
         Product product = new Product("a",2);
         invoice.add(product,5);
-        assertEquals(10,invoice.getAmountDue());
+        Product product2 = new Product("b",4);
+        invoice.add(product2,3);
+        Product product3 = new Product("c",12);
+        invoice.add(product3,2);
+        assertEquals(46,invoice.getAmountDue());
+
     }
 }
